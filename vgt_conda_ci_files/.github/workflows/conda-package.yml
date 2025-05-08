@@ -1,0 +1,42 @@
+name: Test Python Package with Anaconda
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, 3.10, 3.11]
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          auto-update-conda: true
+          activate-environment: vgt-env
+          environment-file: environment.yml
+          auto-activate-base: false
+
+      - name: 🔧 Install your package
+        shell: bash -l {{0}}
+        run: |
+          pip install -e .
+
+      - name: 🧪 Run tests
+        shell: bash -l {{0}}
+        run: |
+          python -m unittest discover tests
+
+      - name: ✅ Confirm Python Version
+        shell: bash -l {{0}}
+        run: python -V
