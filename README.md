@@ -118,7 +118,6 @@ It includes:
 
 # athena-labs
 Athena labs(AGI)
-![vgt_logo](https://github.com/user-attachments/assets/ed1639d0-0e46-49b9-bb19-0d7fa5dc2aeb)
 
 # VGT - Vision Geometry Transformer
 
