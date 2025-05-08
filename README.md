@@ -90,7 +90,31 @@ Apache 2.0 — Free for academic and commercial use with attribution.
 
 
 ---
-Old Version:
+## Mini SDK:
+
+## 🧪 Quick Start SDK
+
+We provide a minimal package for experimentation and prototyping.
+
+🔗 [Download Mini SDK (.zip)](https://github.com/DataSoftcoAI/athena-labs/releases/download/v0.3.0/vgt_core_mini_sdk.zip)
+
+It includes:
+- ✅ Core multi-head attention model
+- ⚙️ Edge normalization utility
+- 🧪 Minimal test script
+
+> Perfect for research notebooks, classroom demos, or prototyping new attention heads.
+
+
+
+
+
+
+
+
+---
+
+##Old Version:
 
 # athena-labs
 Athena labs(AGI)
